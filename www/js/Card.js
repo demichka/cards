@@ -1,9 +1,9 @@
-class Card extends Component {
+class Card {
 
-  constructor(value, suit){
-
-    super();
+  constructor(color, name, value){
+    this.name = name;
+    this.color = color;
     this.value = value;
-    this.suit = suit;
+
   }
 }
