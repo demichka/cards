@@ -1,9 +1,17 @@
 class GameBoard {
-    constructor() {
-        this.cardDeck = new CardDeck();
-        this.showCardDeck();
+    constructor(cards) {
+        this.cardDeck = cards.children;
     }
-    showCardDeck() {
-        console.log(this.cardDeck);
+
+    // shuffleCardDeck() {
+    //     return this.cardDeck.sort(() => Math.random() - 0.5);
+    // }
+    shuffleCardDeck(cards) {
+        for (let i = cards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+        return cards;
     }
+
 }
