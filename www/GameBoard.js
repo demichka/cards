@@ -2,6 +2,7 @@ class GameBoard {
     constructor(cards) {
         this.cardDeck = cards.children;
         this.players = [];
+        this.stack = [];
     }
 
     shuffleCardDeck(cards) {
@@ -21,5 +22,14 @@ class GameBoard {
 
     addPlayer(player) {
         this.players.push(player);
+    }
+
+    playerPutCards(player) {
+        this.stack = this.stack.concat(player.makeMove(2));
+        console.log(this.stack, "this stack");
+    }
+
+    playerTakeCards(cards, player, num) {
+        player.takeCards(cards.splice(0, num));
     }
 }

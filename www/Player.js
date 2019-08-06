@@ -11,4 +11,17 @@ class Player {
     }
     return sum;
   }
+
+  makeMove(num) {
+    return this.playersCards.splice(0, num);
+  }
+  takeCards(cards) {
+    this.playersCards = this.playersCards.concat(cards);
+    console.log(`${this.name} takes cards:`);
+    for (let card of cards) {
+      console.log(card);
+    }
+    console.log(this.playersCards);
+    console.log("**********************");
+  }
 }

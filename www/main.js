@@ -33,3 +33,12 @@ for (let player of gameBoard.players) {
 }
 
 console.log(cardsInGame, "rest of cards");
+console.log("************************");
+
+for (player of gameBoard.players) {
+  gameBoard.playerPutCards(player);
+  gameBoard.playerTakeCards(cardsInGame, player, 2);
+}
+
+console.log(cardsInGame, "rest of cards");
+console.log("************************");
