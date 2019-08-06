@@ -1,13 +1,13 @@
 class CardDeck {
 
-  constructor(){
+  constructor() {
     this.children = [];
     this.names = ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace'];
     this.colors = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
     this.addChildren();
   }
 
-  addChildren(){
+  addChildren() {
     let value = 1;
     for (let name in this.names) {
       value++;
