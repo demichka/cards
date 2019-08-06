@@ -24,9 +24,8 @@ class GameBoard {
         this.players.push(player);
     }
 
-    playerPutCards(player) {
-        this.stack = this.stack.concat(player.makeMove(2));
-        console.log(this.stack, "this stack");
+    playerPutCards(player, num) {
+        this.stack = this.stack.concat(player.makeMove(num));
     }
 
     playerTakeCards(cards, player, num) {

@@ -35,10 +35,27 @@ for (let player of gameBoard.players) {
 console.log(cardsInGame, "rest of cards");
 console.log("************************");
 
-for (player of gameBoard.players) {
-  gameBoard.playerPutCards(player);
+for (let player of gameBoard.players) {
+  gameBoard.playerPutCards(player, 2);
   gameBoard.playerTakeCards(cardsInGame, player, 2);
 }
 
 console.log(cardsInGame, "rest of cards");
 console.log("************************");
+
+for (let player of gameBoard.players) {
+  gameBoard.playerPutCards(player, player.playersCards.length);
+}
+
+cardsInGame = cardsInGame.concat(gameBoard.stack);
+let restInStack = gameBoard.stack.slice();
+console.log(restInStack), "Stack before clean";
+gameBoard.stack.splice(0, gameBoard.stack.length);
+console.log('Stack is empty now');
+
+console.log(`stack: ${gameBoard.stack.length}`);
+console.log(cardsInGame.slice());
+console.log("///////////////////////////Shuffle cards:");
+cardsInGame = gameBoard.shuffleCardDeck(cardsInGame);
+
+console.log(cardsInGame);

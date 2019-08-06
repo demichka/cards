@@ -22,6 +22,7 @@ class Player {
       console.log(card);
     }
     console.log(this.playersCards);
+    console.log(this.sumCards());
     console.log("**********************");
   }
 }
