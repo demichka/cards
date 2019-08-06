@@ -51,9 +51,10 @@ cardsInGame = cardsInGame.concat(gameBoard.stack);
 let restInStack = gameBoard.stack.slice();
 console.log(restInStack), "Stack before clean";
 gameBoard.stack.splice(0, gameBoard.stack.length);
-console.log('Stack is empty now');
+console.log('Throwing pile is cleaned');
 
 console.log(`stack: ${gameBoard.stack.length}`);
+console.log("Threw cards returned to the pile");
 console.log(cardsInGame.slice());
 console.log("///////////////////////////Shuffle cards:");
 cardsInGame = gameBoard.shuffleCardDeck(cardsInGame);

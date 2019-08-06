@@ -13,7 +13,9 @@ class Player {
   }
 
   makeMove(num) {
-    return this.playersCards.splice(0, num);
+    let thrownCards = this.playersCards.splice(0, num);
+    console.log(this.name + " puts cards: ", thrownCards);
+    return thrownCards;
   }
   takeCards(cards) {
     this.playersCards = this.playersCards.concat(cards);
@@ -21,7 +23,7 @@ class Player {
     for (let card of cards) {
       console.log(card);
     }
-    console.log(this.playersCards);
+    console.log(this.playersCards.slice());
     console.log(this.sumCards());
     console.log("**********************");
   }
